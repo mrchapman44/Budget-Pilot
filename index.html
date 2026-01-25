@@ -6,17 +6,13 @@
     <title>Budget Pilot | Your Financial Flight Plan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .cockpit-gradient { background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%); }
-        .gauge-glow { shadow-[0_0_15px_rgba(59,130,246,0.5)]; }
-    </style>
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans">
 
     <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto border-b border-slate-800">
         <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-bold italic">BP</div>
-            <span class="text-xl font-bold tracking-tighter uppercase">Budget Pilot</span>
+            <img src="logo.jpg" alt="Budget Pilot Logo" class="w-10 h-10 rounded-lg shadow-lg">
+            <span class="text-xl font-bold tracking-tighter uppercase text-blue-400">Budget Pilot</span>
         </div>
         <a href="https://budgetpilotsheets.etsy.com" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-bold hover:bg-blue-500 transition text-sm">LAUNCH STORE</a>
     </nav>
@@ -27,11 +23,10 @@
                 THE CONTROL OF A SPREADSHEET.<br><span class="text-blue-500">THE SPEED OF AN APP.</span>
             </h1>
             <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
-                Stop manual typing. Use our <span class="text-white font-bold italic">Smart Runway</span> automation to import bank data and navigate your finances with a visual dashboard[cite: 112, 114].
+                Stop manual typing[cite: 113, 118]. Use our <span class="text-white font-bold italic">Smart Runway</span> automation to import bank data and navigate your finances with a visual dashboard[cite: 112, 114].
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://budgetpilotsheets.etsy.com" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-blue-500 transition">Get Your Flight Manual</a>
-                <a href="#features" class="bg-slate-800 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-700 transition">Explore the Cockpit</a>
+                <a href="https://budgetpilotsheets.etsy.com" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-blue-500 transition uppercase tracking-widest">Start Your Flight</a>
             </div>
         </div>
 
@@ -40,205 +35,93 @@
         </div>
     </header>
 
-    <section id="features" class="py-20 px-6 border-t border-slate-800">
+    <section id="features" class="py-20 px-6 border-t border-slate-800 bg-slate-900/50">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1">
-                <div class="bg-slate-800 p-2 rounded-2xl shadow-inner">
-                    <img src="https://via.placeholder.com/600x400/1e293b/ffffff?text=Landing+Strip+Screenshot" alt="Smart Runway" class="rounded-xl">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 italic text-blue-500">CLEARED FOR TAKEOFF</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <i class="fas fa-bolt text-yellow-500 text-2xl mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-xl uppercase tracking-tight text-white">Smart Bank Import</h4>
+                            <p class="text-slate-400">Paste your bank's raw CSV file; the script automatically cleans, formats, and logs it[cite: 115, 118].</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-brain text-blue-400 text-2xl mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-xl uppercase tracking-tight text-white">Intelligent Auto-Cat</h4>
+                            <p class="text-slate-400">Teach the system your keywords to categorize future transactions instantly[cite: 24, 27, 119].</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-lock text-green-500 text-2xl mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-xl uppercase tracking-tight text-white">Privacy Promise</h4>
+                            <p class="text-slate-400">Automation runs locally on your Google account. We never see your data[cite: 142, 143].</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="order-1 md:order-2">
-                <h2 class="text-3xl font-bold mb-6">Cleared for Takeoff: <span class="text-blue-500">The Smart Runway</span></h2>
-                <p class="text-slate-400 text-lg mb-8">
-                    Stop fighting with formatting. Simply paste your bank's raw CSV file into the <span class="font-bold text-white">Landing Strip</span>. Our script automatically cleans, formats, and categorizes every transaction[cite: 34, 115, 118].
-                </p>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4 bg-slate-800/50 p-4 rounded-xl">
-                        <i class="fas fa-bolt text-blue-500 text-xl"></i>
-                        <p>Instant Auto-Categorization based on keywords[cite: 24, 119].</p>
+            <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-xl">
+                <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-6">Real-Time Cockpit Gauges</h3>
+                <div class="space-y-8">
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm font-mono"><span class="text-blue-400 italic font-bold">CRUISING</span><span>45%</span></div>
+                        <div class="h-3 bg-slate-700 rounded-full"><div class="h-full bg-blue-500 rounded-full w-[45%]"></div></div>
                     </div>
-                    <div class="flex items-center gap-4 bg-slate-800/50 p-4 rounded-xl">
-                        <i class="fas fa-shield-halved text-green-500 text-xl"></i>
-                        <p>100% Privacy. Data stays on your Google Drive[cite: 142, 144].</p>
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm font-mono"><span class="text-yellow-500 italic font-bold">CAUTION</span><span>85%</span></div>
+                        <div class="h-3 bg-slate-700 rounded-full"><div class="h-full bg-yellow-500 rounded-full w-[85%] shadow-[0_0_10px_rgba(234,179,8,0.3)]"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-sm font-mono"><span class="text-red-500 italic font-bold">STALL WARNING</span><span>110%</span></div>
+                        <div class="h-3 bg-slate-700 rounded-full"><div class="h-full bg-red-600 rounded-full w-full animate-pulse shadow-[0_0_15px_rgba(220,38,38,0.5)]"></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-<section class="bg-slate-900 py-20 px-6 text-white">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-12">Visual Flight Controls</h2>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
-                <p class="text-sm uppercase tracking-widest text-slate-400 mb-4">Groceries</p>
-                <div class="relative h-4 bg-slate-700 rounded-full overflow-hidden">
-                    <div class="absolute top-0 left-0 h-full bg-blue-500 w-[45%]"></div>
-                </div>
-                <div class="flex justify-between mt-4 font-mono">
-                    <span class="text-blue-400">$360 spent</span>
-                    <span class="text-slate-500">$800 limit</span>
-                </div>
-                <p class="mt-4 text-xs text-blue-400 font-bold uppercase italic">Status: Cruising Altitude</p>
-            </div>
 
-            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
-                <p class="text-sm uppercase tracking-widest text-slate-400 mb-4">Dining Out</p>
-                <div class="relative h-4 bg-slate-700 rounded-full overflow-hidden">
-                    <div class="absolute top-0 left-0 h-full bg-yellow-500 w-[86%]"></div>
+    <section class="bg-slate-950 py-20 px-6 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 italic text-blue-500 tracking-widest uppercase">Pre-Flight Briefing</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="font-bold mb-2 flex items-center gap-2 text-yellow-500">
+                        <i class="fas fa-exclamation-triangle"></i> The "Unverified" Screen
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Standard Google safety check for custom automation scripts[cite: 7, 8]. The Flight Manual provides 3 easy clicks to authorize your private copy[cite: 12].</p>
                 </div>
-                <div class="flex justify-between mt-4 font-mono">
-                    <span class="text-yellow-400">$172 spent</span>
-                    <span class="text-slate-500">$200 limit</span>
+                <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="font-bold mb-2 flex items-center gap-2 text-red-500">
+                        <i class="fas fa-ban"></i> No Excel Support
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Purpose-built for Google Sheets to leverage the Apps Script automation engine. Not compatible with Microsoft Excel[cite: 141].</p>
                 </div>
-                <p class="mt-4 text-xs text-yellow-400 font-bold uppercase italic">Status: Caution (85% used)</p>
-            </div>
-
-            <div class="bg-slate-800 p-6 rounded-2xl border border-red-900/50">
-                <p class="text-sm uppercase tracking-widest text-slate-400 mb-4">Entertainment</p>
-                <div class="relative h-4 bg-slate-700 rounded-full overflow-hidden">
-                    <div class="absolute top-0 left-0 h-full bg-red-600 w-[110%] shadow-[0_0_15px_rgba(220,38,38,0.5)]"></div>
+                <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="font-bold mb-2 flex items-center gap-2 text-blue-400">
+                        <i class="fas fa-shield-halved"></i> Privacy First
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">No bank passwords required and no data sharing[cite: 143]. Your financial flight recorder is for your eyes only[cite: 144].</p>
                 </div>
-                <div class="flex justify-between mt-4 font-mono">
-                    <span class="text-red-500">$110 spent</span>
-                    <span class="text-slate-500">$100 limit</span>
+                <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="font-bold mb-2 flex items-center gap-2 text-green-500">
+                        <i class="fas fa-infinity"></i> One-Time Purchase
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">No recurring monthly fees or surprise subscriptions[cite: 128]. Buy once, own your financial data forever[cite: 128].</p>
                 </div>
-                <p class="mt-4 text-xs text-red-500 font-bold uppercase italic animate-pulse">⚠️ Stall Warning: Over Budget</p>
-            </div>
-        </div>
-    </div>
-</section>
-    <section class="bg-slate-950 py-20 px-6">
-        <div class="max-w-3xl mx-auto text-center mb-16">
-            <h2 class="text-3xl font-bold mb-4">Pre-Flight Briefing</h2>
-            <p class="text-slate-500">Essential information for every Budget Pilot.</p>
-        </div>
-        <div class="max-w-3xl mx-auto space-y-6">
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-                <h3 class="font-bold text-lg mb-2 flex items-center gap-2">
-                    <i class="fas fa-exclamation-triangle text-yellow-500"></i>
-                    The "Unverified App" Warning
-                </h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    This is a standard Google safety check for spreadsheets with custom scripts. Our Flight Manual provides 3 easy steps to authorize your copy of the sheet[cite: 7, 8, 12].
-                </p>
-            </div>
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-                <h3 class="font-bold text-lg mb-2 flex items-center gap-2">
-                    <i class="fas fa-ban text-red-500"></i>
-                    Not for Excel
-                </h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Budget Pilot is purpose-built for Google Sheets. It relies on Google Apps Script to run the automation and will not function in Microsoft Excel[cite: 141].
-                </p>
             </div>
         </div>
     </section>
-<section class="bg-slate-50 py-20 px-6">
-    <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold tracking-tight text-slate-900">The Technology Behind the Flight</h2>
-            <p class="text-slate-600 mt-4">Local automation. Professional grade security.</p>
-        </div>
 
-        <div class="grid md:grid-cols-2 gap-12">
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
-                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6">
-                    <i class="fas fa-microchip text-xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">The "Auto-Cat" Engine</h3>
-                <p class="text-slate-600 mb-6">
-                    Tired of manual entry? Our custom Google Apps Script acts as your co-pilot. By mapping simple keywords (like "Starbucks" or "Chevron") to your categories, the sheet learns your habits.
-                </p>
-                <ul class="space-y-3 text-slate-700 font-medium">
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-                        One-click Bank CSV processing
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-                        Automated Data Cleaning
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-                        Intelligent Duplicate Detection
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-slate-900 p-8 rounded-3xl text-white shadow-xl relative overflow-hidden">
-                <i class="fas fa-shield-alt absolute -right-4 -bottom-4 text-9xl text-slate-800 opacity-50"></i>
-                
-                <div class="relative z-10">
-                    <div class="w-12 h-12 bg-green-500/20 text-green-400 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-lock text-xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Your Data, Your Drive</h3>
-                    <p class="text-slate-400 mb-6">
-                        Unlike Mint or YNAB, we never see your data. Budget Pilot is a "Local-First" application.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex gap-4">
-                            <i class="fas fa-user-secret text-blue-400 mt-1"></i>
-                            <p class="text-sm text-slate-300"><span class="font-bold text-white">No Cloud Access:</span> The scripts run exclusively on your private Google Account.</p>
-                        </div>
-                        <div class="flex gap-4">
-                            <i class="fas fa-unlink text-blue-400 mt-1"></i>
-                            <p class="text-sm text-slate-300"><span class="font-bold text-white">No Bank Logins:</span> We don't ask for passwords. You simply paste your bank's exported data.</p>
-                        </div>
-                        <div class="flex gap-4">
-                            <i class="fas fa-check-double text-blue-400 mt-1"></i>
-                            <p class="text-sm text-slate-300"><span class="font-bold text-white">Verified Code:</span> The flight manual includes instructions on how to review the script yourself.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
     <footer class="py-20 px-6 text-center border-t border-slate-800">
-        <h2 class="text-3xl font-bold mb-6 italic uppercase tracking-widest text-blue-500">Ready for Takeoff?</h2>
-        <a href="https://budgetpilotsheets.etsy.com" class="inline-block bg-white text-slate-900 px-10 py-4 rounded-xl font-black text-xl hover:bg-blue-500 hover:text-white transition shadow-[0_0_20px_rgba(59,130,246,0.3)]">ADD TO CART ON ETSY</a>
-        <div class="mt-12 text-slate-600 text-xs uppercase tracking-widest">
+        <h2 class="text-4xl font-black mb-8 italic uppercase text-white">Ready for Takeoff?</h2>
+        <a href="https://budgetpilotsheets.etsy.com" class="inline-block bg-blue-600 text-white px-10 py-5 rounded-xl font-black text-2xl hover:bg-blue-500 transition shadow-[0_0_30px_rgba(59,130,246,0.4)] uppercase">Visit the Hangar</a>
+        <div class="mt-12 text-slate-600 text-xs uppercase tracking-widest font-bold">
             &copy; 2026 Budget Pilot Sheets | Professional Financial Navigation
         </div>
-        <section id="faq" class="bg-white py-20 px-6">
-    <div class="max-w-3xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12 text-slate-900">Pre-Flight Briefing (FAQ)</h2>
-        
-        <div class="space-y-8">
-            <div class="border-b border-slate-200 pb-6">
-                <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
-                    <i class="fas fa-exclamation-triangle text-amber-500"></i>
-                    Why do I see a "Google hasn't verified this app" warning?
-                </h3>
-                <p class="text-slate-600 leading-relaxed">
-                    Don't worry, Pilot. This is a standard Google safety check for <strong>any</strong> spreadsheet that uses custom automation scripts. Because you are the owner of the sheet, you are simply giving <em>your own</em> copy permission to run the "Auto-Pilot" code. We provide a step-by-step guide in the Flight Manual to bypass this in 3 clicks.
-                </p>
-            </div>
-
-            <div class="border-b border-slate-200 pb-6">
-                <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
-                    <i class="fas fa-file-excel text-green-600"></i>
-                    Does this work in Microsoft Excel?
-                </h3>
-                <p class="text-slate-600 leading-relaxed">
-                    Negative. Budget Pilot is engineered specifically for <strong>Google Sheets</strong> to take advantage of Google Apps Script for the bank import automation. It will not function in Excel.
-                </p>
-            </div>
-
-            <div class="border-b border-slate-200 pb-6">
-                <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
-                    <i class="fas fa-eye-slash text-blue-600"></i>
-                    Can you see my financial data?
-                </h3>
-                <p class="text-slate-600 leading-relaxed">
-                    Never. Your data stays on <strong>your</strong> Google Drive. We have no access to your sheet, your bank CSVs, or your spending habits. You are the sole controller of your financial flight recorder.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
     </footer>
 
 </body>
