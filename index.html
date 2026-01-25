@@ -36,7 +36,7 @@
         </div>
 
         <div class="mt-16 max-w-5xl mx-auto rounded-3xl border-4 border-slate-800 shadow-2xl overflow-hidden bg-slate-950">
-            <img src="https://via.placeholder.com/1200x675/0f172a/3b82f6?text=PLACE+BP+INFOGRAPHIC+HERE" alt="Budget Pilot Cockpit View" class="w-full opacity-90">
+            <img src="BP-Infographic.jpg" alt="Budget Pilot Cockpit View" class="w-full opacity-90">
         </div>
     </header>
 
@@ -65,7 +65,49 @@
             </div>
         </div>
     </section>
+<section class="bg-slate-900 py-20 px-6 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-12">Visual Flight Controls</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+                <p class="text-sm uppercase tracking-widest text-slate-400 mb-4">Groceries</p>
+                <div class="relative h-4 bg-slate-700 rounded-full overflow-hidden">
+                    <div class="absolute top-0 left-0 h-full bg-blue-500 w-[45%]"></div>
+                </div>
+                <div class="flex justify-between mt-4 font-mono">
+                    <span class="text-blue-400">$360 spent</span>
+                    <span class="text-slate-500">$800 limit</span>
+                </div>
+                <p class="mt-4 text-xs text-blue-400 font-bold uppercase italic">Status: Cruising Altitude</p>
+            </div>
 
+            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+                <p class="text-sm uppercase tracking-widest text-slate-400 mb-4">Dining Out</p>
+                <div class="relative h-4 bg-slate-700 rounded-full overflow-hidden">
+                    <div class="absolute top-0 left-0 h-full bg-yellow-500 w-[86%]"></div>
+                </div>
+                <div class="flex justify-between mt-4 font-mono">
+                    <span class="text-yellow-400">$172 spent</span>
+                    <span class="text-slate-500">$200 limit</span>
+                </div>
+                <p class="mt-4 text-xs text-yellow-400 font-bold uppercase italic">Status: Caution (85% used)</p>
+            </div>
+
+            <div class="bg-slate-800 p-6 rounded-2xl border border-red-900/50">
+                <p class="text-sm uppercase tracking-widest text-slate-400 mb-4">Entertainment</p>
+                <div class="relative h-4 bg-slate-700 rounded-full overflow-hidden">
+                    <div class="absolute top-0 left-0 h-full bg-red-600 w-[110%] shadow-[0_0_15px_rgba(220,38,38,0.5)]"></div>
+                </div>
+                <div class="flex justify-between mt-4 font-mono">
+                    <span class="text-red-500">$110 spent</span>
+                    <span class="text-slate-500">$100 limit</span>
+                </div>
+                <p class="mt-4 text-xs text-red-500 font-bold uppercase italic animate-pulse">⚠️ Stall Warning: Over Budget</p>
+            </div>
+        </div>
+    </div>
+</section>
     <section class="bg-slate-950 py-20 px-6">
         <div class="max-w-3xl mx-auto text-center mb-16">
             <h2 class="text-3xl font-bold mb-4">Pre-Flight Briefing</h2>
@@ -99,6 +141,43 @@
         <div class="mt-12 text-slate-600 text-xs uppercase tracking-widest">
             &copy; 2026 Budget Pilot Sheets | Professional Financial Navigation
         </div>
+        <section id="faq" class="bg-white py-20 px-6">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 text-slate-900">Pre-Flight Briefing (FAQ)</h2>
+        
+        <div class="space-y-8">
+            <div class="border-b border-slate-200 pb-6">
+                <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                    <i class="fas fa-exclamation-triangle text-amber-500"></i>
+                    Why do I see a "Google hasn't verified this app" warning?
+                </h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Don't worry, Pilot. This is a standard Google safety check for <strong>any</strong> spreadsheet that uses custom automation scripts. Because you are the owner of the sheet, you are simply giving <em>your own</em> copy permission to run the "Auto-Pilot" code. We provide a step-by-step guide in the Flight Manual to bypass this in 3 clicks.
+                </p>
+            </div>
+
+            <div class="border-b border-slate-200 pb-6">
+                <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                    <i class="fas fa-file-excel text-green-600"></i>
+                    Does this work in Microsoft Excel?
+                </h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Negative. Budget Pilot is engineered specifically for <strong>Google Sheets</strong> to take advantage of Google Apps Script for the bank import automation. It will not function in Excel.
+                </p>
+            </div>
+
+            <div class="border-b border-slate-200 pb-6">
+                <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                    <i class="fas fa-eye-slash text-blue-600"></i>
+                    Can you see my financial data?
+                </h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Never. Your data stays on <strong>your</strong> Google Drive. We have no access to your sheet, your bank CSVs, or your spending habits. You are the sole controller of your financial flight recorder.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
     </footer>
 
 </body>
