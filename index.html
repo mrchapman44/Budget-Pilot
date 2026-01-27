@@ -19,7 +19,7 @@
 
     <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto border-b border-slate-800">
         <div class="flex items-center gap-3">
-            <img src="logo.png" alt="Budget Pilot Logo" class="w-25 h-25 rounded-lg shadow-lg">
+            <img src="logo.png" alt="Budget Pilot Official Logo - Automated Google Sheets Budgeting" class="w-25 h-25 rounded-lg shadow-lg">
             <span class="text-xl font-bold tracking-tighter uppercase text-blue-400">Jet Fueled Budget Automation</span>
         </div>
         <a href="https://budgetpilotsheets.etsy.com" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-bold hover:bg-blue-500 transition text-sm">LAUNCH STORE</a>
@@ -28,7 +28,7 @@
     <header class="relative px-6 py-16 md:py-24 max-w-7xl mx-auto text-center overflow-hidden">
      
         <div class="mt-16 max-w-5xl mx-auto rounded-3xl border-4 border-slate-800 shadow-2xl overflow-hidden bg-slate-950">
-            <img src="BP Infographic.png" alt="Budget Pilot Cockpit View" class="w-full opacity-90">
+            <img src="BP Infographic.png" alt="Budget Pilot Cockpit Infographic showing automated bank import and visual spending gauges" class="w-full opacity-90">
         </div>
         <div class="relative z-10">
             <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight leading-tight">
@@ -44,52 +44,64 @@
 
     </header>
 
-  <section id="gallery" class="py-20 px-6 bg-slate-900 border-t border-slate-800 overflow-hidden">
-    <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight uppercase italic text-blue-500">The Flight Deck</h2>
-            <p class="text-slate-400">Click an instrument to enlarge the view.</p>
+ <section id="gallery" class="py-20 px-6 bg-slate-900 border-t border-slate-800 overflow-hidden">
+    <div class="max-w-2xl mx-auto"> <div class="text-center mb-8">
+            <h2 class="text-2xl md:text-4xl font-black mb-2 tracking-tight uppercase italic text-blue-500">The Flight Deck</h2>
+            <p class="text-slate-500 text-sm tracking-widest uppercase">Click to Enlarge Instrument</p>
         </div>
 
         <div class="relative group">
-            <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
-                
-                <div class="min-w-full px-4">
-                    <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 cursor-zoom-in" onclick="openLightbox('Dashboard.png')">
-                        <img src="Dashboard.png" alt="Cockpit Dashboard" class="rounded-xl mb-6 hover-zoom w-full">
-                        <h3 class="text-2xl font-bold text-white uppercase italic">The Cockpit (HUD)</h3>
-                        <p class="text-slate-500">Real-time Heads-Up Display showing Income, Expenses, and Net Lift.</p>
+            <div class="overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 shadow-2xl">
+                <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                    
+                    <div class="min-w-full p-4">
+                        <div class="cursor-zoom-in" onclick="openLightbox('Dashboard.png')">
+                            <img src="Dashboard.png" alt="Budget Pilot Cockpit Dashboard featuring real-time financial charts" class="rounded-xl hover-zoom w-full mb-4">
+                            <div class="px-4 pb-4">
+                                <h3 class="text-lg font-bold text-white uppercase italic">The Cockpit (HUD)</h3>
+                                <p class="text-slate-500 text-xs mt-1">Real-time Heads-Up Display showing Income, Expenses, and Net Lift.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="min-w-full px-4">
-                    <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 cursor-zoom-in" onclick="openLightbox('Net Worth.png')">
-                        <img src="Net Worth.png" alt="Net Worth" class="rounded-xl mb-6 hover-zoom w-full">
-                        <h3 class="text-2xl font-bold text-white uppercase italic">Net Worth Altimeter</h3>
-                        <p class="text-slate-500">Track assets vs. liabilities and watch your financial altitude climb.</p>
+                    <div class="min-w-full p-4">
+                        <div class="cursor-zoom-in" onclick="openLightbox('Net Worth.png')">
+                            <img src="Net Worth.png" alt="Budget Pilot Net Worth Altimeter showing asset growth" class="rounded-xl hover-zoom w-full mb-4">
+                            <div class="px-4 pb-4">
+                                <h3 class="text-lg font-bold text-white uppercase italic">Net Worth Altimeter</h3>
+                                <p class="text-slate-500 text-xs mt-1">Track assets vs. liabilities and watch your financial altitude climb.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="min-w-full px-4">
-                    <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 cursor-zoom-in" onclick="openLightbox('Landing Strip.png')">
-                        <img src="Landing Strip.png" alt="Landing Strip" class="rounded-xl mb-6 hover-zoom w-full">
-                        <h3 class="text-2xl font-bold text-white uppercase italic">The Landing Strip</h3>
-                        <p class="text-slate-500">Automation engine where you paste bank data for instant processing.</p>
+                    <div class="min-w-full p-4">
+                        <div class="cursor-zoom-in" onclick="openLightbox('Landing Strip.png')">
+                            <img src="Landing Strip.png" alt="Budget Pilot Landing Strip for automated bank data import" class="rounded-xl hover-zoom w-full mb-4">
+                            <div class="px-4 pb-4">
+                                <h3 class="text-lg font-bold text-white uppercase italic">The Landing Strip</h3>
+                                <p class="text-slate-500 text-xs mt-1">Automation engine where you paste bank data for instant processing.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
 
-            <button onclick="moveSlide(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 bg-blue-600/50 hover:bg-blue-600 p-4 rounded-full text-white ml-2 transition">
-                <i class="fas fa-chevron-left"></i>
+            <button onclick="moveSlide(-1)" class="absolute -left-6 md:-left-12 top-1/2 -translate-y-1/2 bg-slate-800 hover:bg-blue-600 w-10 h-10 rounded-full text-white flex items-center justify-center transition shadow-xl border border-slate-700">
+                <i class="fas fa-chevron-left text-sm"></i>
             </button>
-            <button onclick="moveSlide(1)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-blue-600/50 hover:bg-blue-600 p-4 rounded-full text-white mr-2 transition">
-                <i class="fas fa-chevron-right"></i>
+            <button onclick="moveSlide(1)" class="absolute -right-6 md:-right-12 top-1/2 -translate-y-1/2 bg-slate-800 hover:bg-blue-600 w-10 h-10 rounded-full text-white flex items-center justify-center transition shadow-xl border border-slate-700">
+                <i class="fas fa-chevron-right text-sm"></i>
             </button>
+        </div>
+        
+        <div class="flex justify-center gap-2 mt-6">
+            <div class="dot w-2 h-2 rounded-full bg-blue-600"></div>
+            <div class="dot w-2 h-2 rounded-full bg-slate-700"></div>
+            <div class="dot w-2 h-2 rounded-full bg-slate-700"></div>
         </div>
     </div>
 </section>
-
 <div id="lightbox" onclick="this.style.display='none'">
     <img id="lightbox-img" src="">
     <p class="absolute bottom-10 text-white font-bold uppercase tracking-widest">Click anywhere to close</p>
@@ -212,11 +224,20 @@
 <script>
     let currentSlide = 0;
     const carousel = document.getElementById('carousel');
-    const totalSlides = 3; // Update this number if you add more images
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = 3;
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('bg-blue-600', index === currentSlide);
+            dot.classList.toggle('bg-slate-700', index !== currentSlide);
+        });
+    }
 
     function moveSlide(direction) {
         currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
         carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateDots();
     }
 
     function openLightbox(imageSrc) {
