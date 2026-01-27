@@ -6,6 +6,19 @@
     <title>Budget Pilot | Your Financial Flight Plan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* This is your Custom Style Hangar */
+        .hover-zoom {
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        /* This creates the blue glow and slight pop when you mouse over an image */
+        .group:hover .hover-zoom {
+            transform: scale(1.03); 
+            border-color: #3b82f6; 
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); 
+        }
+    </style>
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans">
 
@@ -36,49 +49,79 @@
 
     </header>
 
-    <section id="gallery" class="py-20 px-6 bg-slate-900 border-t border-slate-800">
+   <section id="gallery" class="py-20 px-6 bg-slate-900 border-t border-slate-800">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight uppercase italic text-blue-500">The Flight Deck</h2>
-            <p class="text-slate-400 text-lg max-w-2xl mx-auto">High-performance visuals designed for clarity. See exactly where your money is going with our integrated instrument panel.</p>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto">Click any instrument for a closer look at your financial navigation system.</p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover:border-blue-500 transition">
-                <img src="Dashboard.png" alt="Budget Pilot Cockpit Dashboard" class="rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition">
-                <h3 class="text-xl font-bold mb-2 px-2">The Cockpit (HUD)</h3>
-                <p class="text-slate-500 text-sm px-2 mb-4">A real-time Heads-Up Display showing Total Income, Expenses, and your "Net Lift" for the month[cite: 70, 72, 73].</p>
+            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover-zoom relative overflow-hidden">
+                <div class="relative overflow-hidden rounded-2xl">
+                    <img src="Dashboard.png" alt="Budget Pilot Cockpit Dashboard" class="w-full opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Enlarge View</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mt-6 mb-2 text-white">The Cockpit (HUD)</h3>
+                <p class="text-slate-500 text-sm">Real-time Heads-Up Display showing Income, Expenses, and Net Lift.</p>
             </div>
 
-            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover:border-blue-500 transition">
-                <img src="Net Worth.png" alt="Net Worth Controls" class="rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition">
-                <h3 class="text-xl font-bold mb-2 px-2">Net Worth Altimeter</h3>
-                <p class="text-slate-500 text-sm px-2 mb-4">Track assets vs. liabilities over time and watch your financial altitude climb toward independence[cite: 86, 89, 134].</p>
+            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover-zoom relative overflow-hidden">
+                <div class="relative overflow-hidden rounded-2xl">
+                    <img src="Net Worth.png" alt="Net Worth Controls" class="w-full opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Enlarge View</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mt-6 mb-2 text-white">Net Worth Altimeter</h3>
+                <p class="text-slate-500 text-sm">Track assets vs. liabilities and watch your financial altitude climb.</p>
             </div>
 
-            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover:border-blue-500 transition">
-                <img src="Calendar.png" alt="Scheduled Bills and Autopayments" class="rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition">
-                <h3 class="text-xl font-bold mb-2 px-2">Flight Schedule</h3>
-                <p class="text-slate-500 text-sm px-2 mb-4">A visual bill calendar that ensures you never miss a payment and stay on course[cite: 90, 92, 135].</p>
+            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover-zoom relative overflow-hidden">
+                <div class="relative overflow-hidden rounded-2xl">
+                    <img src="Calendar.png" alt="Scheduled Bills" class="w-full opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Enlarge View</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mt-6 mb-2 text-white">Flight Schedule</h3>
+                <p class="text-slate-500 text-sm">Visual bill calendar ensuring you never miss a payment deadline.</p>
             </div>
 
-            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover:border-blue-500 transition">
-                <img src="Landing Strip.png" alt="Smart Bank Import Landing Strip" class="rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition">
-                <h3 class="text-xl font-bold mb-2 px-2">The Landing Strip</h3>
-                <p class="text-slate-500 text-sm px-2 mb-4">The Smart Runway where you paste raw bank data for instant, automated processing[cite: 33, 34, 118].</p>
+            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover-zoom relative overflow-hidden">
+                <div class="relative overflow-hidden rounded-2xl">
+                    <img src="Landing Strip.png" alt="Smart Bank Import" class="w-full opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Enlarge View</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mt-6 mb-2 text-white">The Landing Strip</h3>
+                <p class="text-slate-500 text-sm">Paste raw bank data here for instant, automated processing.</p>
             </div>
 
-            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover:border-blue-500 transition">
-                <img src="Paycheck Calculator.png" alt="Paycheck Calculator Tool" class="rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition">
-                <h3 class="text-xl font-bold mb-2 px-2">Paycheck Calculator</h3>
-                <p class="text-slate-500 text-sm px-2 mb-4">Powerful tools to estimate net payroll and total taxes for the year.</p>
+            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover-zoom relative overflow-hidden">
+                <div class="relative overflow-hidden rounded-2xl">
+                    <img src="Paycheck Calculator.png" alt="Paycheck Calculator" class="w-full opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Enlarge View</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mt-6 mb-2 text-white">Paycheck Calculator</h3>
+                <p class="text-slate-500 text-sm">Estimate net payroll and total annual taxes with precision.</p>
             </div>
 
-            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover:border-blue-500 transition">
-                <img src="Autocategorization.png" alt="Category Automation Rules" class="rounded-2xl mb-6 opacity-80 group-hover:opacity-100 transition">
-                <h3 class="text-xl font-bold mb-2 px-2">Auto-Pilot Config</h3>
-                <p class="text-slate-500 text-sm px-2 mb-4">The "brain" that learns your spending habits and categorizes future stops automatically[cite: 23, 114, 133].</p>
+            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover-zoom relative overflow-hidden">
+                <div class="relative overflow-hidden rounded-2xl">
+                    <img src="Autocategorization.png" alt="Category Automation" class="w-full opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Enlarge View</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mt-6 mb-2 text-white">Auto-Pilot Config</h3>
+                <p class="text-slate-500 text-sm">The automation engine that learns and codes your spending habits.</p>
             </div>
 
         </div>
