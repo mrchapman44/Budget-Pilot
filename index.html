@@ -6,19 +6,14 @@
     <title>Budget Pilot | Your Financial Flight Plan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        /* This is your Custom Style Hangar */
-        .hover-zoom {
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        /* This creates the blue glow and slight pop when you mouse over an image */
-        .group:hover .hover-zoom {
-            transform: scale(1.03); 
-            border-color: #3b82f6; 
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); 
-        }
-    </style>
+   <style>
+    .hover-zoom { transition: all 0.3s ease; }
+    .group:hover .hover-zoom { transform: scale(1.02); }
+    
+    /* Lightbox overlay style */
+    #lightbox { display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; cursor: zoom-out; }
+    #lightbox img { max-width: 90%; max-height: 80%; border: 4px solid #3b82f6; border-radius: 12px; }
+</style>
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans">
 
@@ -49,84 +44,56 @@
 
     </header>
 
-   <section id="gallery" class="py-20 px-6 bg-slate-900 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
+  <section id="gallery" class="py-20 px-6 bg-slate-900 border-t border-slate-800 overflow-hidden">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
             <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight uppercase italic text-blue-500">The Flight Deck</h2>
-            <p class="text-slate-400 text-lg max-w-2xl mx-auto">Click any instrument for a closer look at your financial navigation system.</p>
+            <p class="text-slate-400">Click an instrument to enlarge the view.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover-zoom relative overflow-hidden">
-                <div class="relative overflow-hidden rounded-2xl">
-                    <img src="Dashboard.png" alt="Budget Pilot Cockpit Dashboard" class="w-full opacity-80 group-hover:opacity-100 transition-opacity">
-                    <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Enlarge View</span>
+        <div class="relative group">
+            <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                
+                <div class="min-w-full px-4">
+                    <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 cursor-zoom-in" onclick="openLightbox('Dashboard.png')">
+                        <img src="Dashboard.png" alt="Cockpit Dashboard" class="rounded-xl mb-6 hover-zoom w-full">
+                        <h3 class="text-2xl font-bold text-white uppercase italic">The Cockpit (HUD)</h3>
+                        <p class="text-slate-500">Real-time Heads-Up Display showing Income, Expenses, and Net Lift.</p>
                     </div>
                 </div>
-                <h3 class="text-xl font-bold mt-6 mb-2 text-white">The Cockpit (HUD)</h3>
-                <p class="text-slate-500 text-sm">Real-time Heads-Up Display showing Income, Expenses, and Net Lift.</p>
-            </div>
 
-            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover-zoom relative overflow-hidden">
-                <div class="relative overflow-hidden rounded-2xl">
-                    <img src="Net Worth.png" alt="Net Worth Controls" class="w-full opacity-80 group-hover:opacity-100 transition-opacity">
-                    <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Enlarge View</span>
+                <div class="min-w-full px-4">
+                    <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 cursor-zoom-in" onclick="openLightbox('Net Worth.png')">
+                        <img src="Net Worth.png" alt="Net Worth" class="rounded-xl mb-6 hover-zoom w-full">
+                        <h3 class="text-2xl font-bold text-white uppercase italic">Net Worth Altimeter</h3>
+                        <p class="text-slate-500">Track assets vs. liabilities and watch your financial altitude climb.</p>
                     </div>
                 </div>
-                <h3 class="text-xl font-bold mt-6 mb-2 text-white">Net Worth Altimeter</h3>
-                <p class="text-slate-500 text-sm">Track assets vs. liabilities and watch your financial altitude climb.</p>
-            </div>
 
-            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover-zoom relative overflow-hidden">
-                <div class="relative overflow-hidden rounded-2xl">
-                    <img src="Calendar.png" alt="Scheduled Bills" class="w-full opacity-80 group-hover:opacity-100 transition-opacity">
-                    <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Enlarge View</span>
+                <div class="min-w-full px-4">
+                    <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 cursor-zoom-in" onclick="openLightbox('Landing Strip.png')">
+                        <img src="Landing Strip.png" alt="Landing Strip" class="rounded-xl mb-6 hover-zoom w-full">
+                        <h3 class="text-2xl font-bold text-white uppercase italic">The Landing Strip</h3>
+                        <p class="text-slate-500">Automation engine where you paste bank data for instant processing.</p>
                     </div>
                 </div>
-                <h3 class="text-xl font-bold mt-6 mb-2 text-white">Flight Schedule</h3>
-                <p class="text-slate-500 text-sm">Visual bill calendar ensuring you never miss a payment deadline.</p>
+
             </div>
 
-            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover-zoom relative overflow-hidden">
-                <div class="relative overflow-hidden rounded-2xl">
-                    <img src="Landing Strip.png" alt="Smart Bank Import" class="w-full opacity-80 group-hover:opacity-100 transition-opacity">
-                    <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Enlarge View</span>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mt-6 mb-2 text-white">The Landing Strip</h3>
-                <p class="text-slate-500 text-sm">Paste raw bank data here for instant, automated processing.</p>
-            </div>
-
-            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover-zoom relative overflow-hidden">
-                <div class="relative overflow-hidden rounded-2xl">
-                    <img src="Paycheck Calculator.png" alt="Paycheck Calculator" class="w-full opacity-80 group-hover:opacity-100 transition-opacity">
-                    <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Enlarge View</span>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mt-6 mb-2 text-white">Paycheck Calculator</h3>
-                <p class="text-slate-500 text-sm">Estimate net payroll and total annual taxes with precision.</p>
-            </div>
-
-            <div class="group bg-slate-950 p-4 rounded-3xl border border-slate-800 hover-zoom relative overflow-hidden">
-                <div class="relative overflow-hidden rounded-2xl">
-                    <img src="Autocategorization.png" alt="Category Automation" class="w-full opacity-80 group-hover:opacity-100 transition-opacity">
-                    <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Enlarge View</span>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mt-6 mb-2 text-white">Auto-Pilot Config</h3>
-                <p class="text-slate-500 text-sm">The automation engine that learns and codes your spending habits.</p>
-            </div>
-
+            <button onclick="moveSlide(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 bg-blue-600/50 hover:bg-blue-600 p-4 rounded-full text-white ml-2 transition">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button onclick="moveSlide(1)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-blue-600/50 hover:bg-blue-600 p-4 rounded-full text-white mr-2 transition">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
     </div>
 </section>
+
+<div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="">
+    <p class="absolute bottom-10 text-white font-bold uppercase tracking-widest">Click anywhere to close</p>
+</div>
     
     <section id="features" class="py-20 px-6 border-t border-slate-800 bg-slate-900/50">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
@@ -209,6 +176,32 @@
         </div>
     </section>
 
+    <section id="signup" class="py-20 px-6 bg-blue-600">
+    <div class="max-w-4xl mx-auto bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl border-t-4 border-white relative overflow-hidden">
+        <i class="fas fa-satellite-dish absolute -right-4 -top-4 text-8xl text-slate-800 opacity-20"></i>
+        
+        <div class="relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-black mb-4 tracking-tight uppercase italic text-white">Join the Mission Briefing</h2>
+            <p class="text-blue-200 text-lg mb-8 max-w-xl mx-auto">
+                Not ready for takeoff yet? Get our <span class="text-white font-bold">"Pre-Flight Budget Checklist"</span> and exclusive updates delivered to your hangar.
+            </p>
+
+            <form action="#" method="POST" class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+                <input type="email" name="email" placeholder="Enter Pilot Email Address..." required 
+                    class="flex-1 px-6 py-4 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 font-mono">
+                <button type="submit" 
+                    class="bg-white text-blue-600 px-8 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-blue-50 transition shadow-lg">
+                    Subscribe
+                </button>
+            </form>
+            
+            <p class="mt-6 text-xs text-blue-300 uppercase tracking-widest">
+                <i class="fas fa-lock mr-2"></i> Encrypted Connection. No Spam. Unsubscribe Anytime.
+            </p>
+        </div>
+    </div>
+</section>
+    
     <footer class="py-20 px-6 text-center border-t border-slate-800">
         <h2 class="text-4xl font-black mb-8 italic uppercase text-white">Ready for Takeoff?</h2>
         <a href="https://budgetpilotsheets.etsy.com" class="inline-block bg-blue-600 text-white px-10 py-5 rounded-xl font-black text-2xl hover:bg-blue-500 transition shadow-[0_0_30px_rgba(59,130,246,0.4)] uppercase">Visit the Hangar</a>
@@ -216,6 +209,22 @@
             &copy; 2026 Budget Pilot Sheets | Professional Financial Navigation
         </div>
     </footer>
+<script>
+    let currentSlide = 0;
+    const carousel = document.getElementById('carousel');
+    const totalSlides = 3; // Update this number if you add more images
 
+    function moveSlide(direction) {
+        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    function openLightbox(imageSrc) {
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        lbImg.src = imageSrc;
+        lb.style.display = 'flex';
+    }
+</script>
 </body>
 </html>
